@@ -5,20 +5,23 @@ class IntroState extends Component {
         console.log("constructor()")
         super(props);
         this.state = {
-        count: 0,
-        timer: 0,
-        interval: null
+            fullName: 'achref bz',
+            bio: 'html , css , js , reactJS',
+            imgSRC: '/img-1.jpg',
+            count: 0,
+            timer: 0,
+            interval: null
         }
     }
 
     increment = () => {
-        this.setState({count: this.state.count + 1})
+        this.setState({ count: this.state.count + 1 })
     }
     decrement = () => {
-        this.setState({count: this.state.count - 1})
+        this.setState({ count: this.state.count - 1 })
     }
-    
-    
+
+
     componentDidMount() {
         console.log("componentDidMount()");
         // this.setState({
@@ -37,14 +40,14 @@ class IntroState extends Component {
 
     render() {
         console.log("render()");
-    return (
-        <div>
-            <button onClick={this.increment}>(+)</button>
-            <span>{this.state.count}</span>
-            <button onClick={this.decrement}>(-)</button>
-            <h3>{this.state.timer}</h3>
-        </div>
-    )
+        return (
+            <div>
+                <button onClick={this.increment}>(+)</button>
+                <span>{this.state.count}</span>
+                <button onClick={this.decrement}>(-)</button>
+                <h3>{this.state.timer}</h3>
+            </div>
+        )
     }
 }
 export default IntroState
